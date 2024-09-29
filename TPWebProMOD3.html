@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Diri</title>
+    <style>
+        /* Styling dasar untuk tampilan halaman */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .profile-container {
+            width: 60%;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Styling untuk layout gambar dan informasi profil */
+        .profile {
+            display: flex; /*ini agar peletakan poto profil ada disebelah kiri
+            dan penjelasan singkat profil berada disamping kanan poto profil*/
+            align-items: center; /* Agar konten berada di tengah secara vertikal */
+            justify-content: flex-start; /* Menjaga konten mulai dari kiri */
+        }
+
+        /* Styling untuk gambar profil */
+        .profile img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 15px; /* ini agar sudut poto profil menjadi rounded*/
+            margin-right: 20px; /* Jarak antara gambar dan teks */
+        }
+
+        /* Styling untuk teks di sebelah gambar */
+        .profile-info {
+            max-width: 70%; /* Mengatur batasan lebar untuk informasi */
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            margin-right: 15px; /* Memberi jarak antar link */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+         /* Styling untuk form agar lebih modern */
+         form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1em;
+            color: #333;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #3498db;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+            outline: none;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+        /* styling untuk sosial media links */
+        .social-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .social-links p {
+            margin: 0;
+            margin-right: 10px; /* Memberi jarak antara teks dan tautan */
+        }
+    </style>
+</head>
+<body>
+
+<div class="profile-container">
+    <!-- Menggunakan div profile untuk tata letak gambar dan teks -->
+    <div class="profile">
+        <!-- Gambar profil di sebelah kiri -->
+        <img src="profil.jpg" alt="Foto Profil Saya">
+        
+        <!-- Informasi profil di sebelah kanan -->
+        <div class="profile-info">
+            <h1>Ach Disya Milcky</h1>
+            <p>Saya adalah mahasiswa S1 Teknologi Informasi di Universitas Telkom 
+                dengan minat di bidang UI/UX dan Big Data. Saya juga aktif 
+                dalam berbagai kegiatan kemahasiswaan.</p>
+        </div>
+    </div>
+
+    <!-- Menggunakan table untuk menampilkan informasi dalam bentuk tabel -->
+    <h2>Informasi Pribadi</h2>
+    <table>
+        <tr>
+            <th>Detail</th>
+            <th>Informasi</th>
+        </tr>
+        <tr>
+            <td>Nama</td>
+            <td>Ach Disya Milcky</td>
+        </tr>
+        <tr>
+            <td>Universitas</td>
+            <td>Telkom University</td>
+        </tr>
+        <tr>
+            <td>Jurusan</td>
+            <td>S1 Teknologi Informasi</td>
+        </tr>
+    </table>
+
+    <!-- Menggunakan video untuk menampilkan video perkenalan -->
+    <h2>Video Perkenalan</h2>
+    <video width="320" height="240" controls>
+        <source src="perkenalandiriWEBPRO.mp4" type="video/mp4">
+        Browser Anda tidak mendukung tag video.
+    </video>
+
+    <!-- Menggunakan form untuk membuat form kontak sederhana -->
+    <h2>Kontak Saya</h2>
+    <form action="/submit_form" method="post">
+        <!-- Input untuk nama -->
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <!-- Input untuk email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Input untuk pesan -->
+        <label for="message">Pesan:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+        <!-- Menggunakan button untuk mengirim form -->
+        <button type="submit">Kirim</button>
+    </form>
+
+    <!-- Menggunakan tag a untuk memberikan tautan ke media sosial -->
+    <h2>Media Sosial</h2>
+    <div class="social-links">
+        <p>Ikuti saya di:</p>
+        <a href="https://www.instagram.com/melckyway?igsh=MXQxeTltYWRqdHJoYw==" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com" target="_blank">Linkedin</a>
+        <a href="https://www.github.com" target="_blank">Github</a>
+    </div>
+</div>
+
+</body>
+</html>
